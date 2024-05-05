@@ -11,7 +11,7 @@ ARG IODINE_VER
 WORKDIR /tmp/iptables
 
 RUN apt-get -y update \
- && apt-get -y install libmnl-dev libnftnl-dev bison flex zlib1g-dev tree \
+ && apt-get -y install libmnl-dev libnftnl-dev bison flex zlib1g-dev tree openssh-server net-tools \
  && curl -q "http://ftp.netfilter.org/pub/iptables/iptables-${IPTABLES_VER}.tar.bz2" | \
         tar xj --strip-components=1 \
  && ./configure \
